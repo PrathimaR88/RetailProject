@@ -1,0 +1,9 @@
+<suite name="Project Suite" >
+    <test name="TestNG Testcases" >
+    
+        <classes>
+            <class name="com.training.sanity.tests.AdminLoginTest" />
+            
+        </classes>
+    </test>
+</suite>

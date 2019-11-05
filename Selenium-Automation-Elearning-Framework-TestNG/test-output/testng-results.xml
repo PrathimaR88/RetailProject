@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="28211" started-at="2019-11-04T09:22:36Z" finished-at="2019-11-04T09:23:04Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="28211" started-at="2019-11-04T09:22:36Z" finished-at="2019-11-04T09:23:04Z">
+      <class name="com.training.sanity.tests.FiveDeleteProduct">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.FiveDeleteProduct@724af044]" name="setUpBeforeClass" is-config="true" duration-ms="16" started-at="2019-11-04T14:52:36Z" finished-at="2019-11-04T14:52:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.FiveDeleteProduct@724af044]" name="setUp" is-config="true" duration-ms="10839" started-at="2019-11-04T14:52:36Z" finished-at="2019-11-04T14:52:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="ValidateFilter()[pri:0, instance:com.training.sanity.tests.FiveDeleteProduct@724af044]" name="ValidateFilter" duration-ms="16341" started-at="2019-11-04T14:52:46Z" finished-at="2019-11-04T14:53:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateFilter -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.FiveDeleteProduct@724af044]" name="tearDown" is-config="true" duration-ms="1000" started-at="2019-11-04T14:53:03Z" finished-at="2019-11-04T14:53:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.training.sanity.tests.FiveDeleteProduct -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
