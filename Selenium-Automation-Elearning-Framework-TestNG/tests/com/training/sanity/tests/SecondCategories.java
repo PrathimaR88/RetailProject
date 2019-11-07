@@ -27,9 +27,7 @@ public class SecondCategories {
 	private GenericLoginPOM loginPOM;
 	private CatalogCategoriesPOM CataPOM;
 	private static Properties properties;
-	
-	
-	
+		
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException {
 		properties = new Properties();
@@ -43,8 +41,6 @@ public class SecondCategories {
 		loginPOM = new GenericLoginPOM(driver); 
 		CataPOM = new CatalogCategoriesPOM(driver);
 		adminUrl = properties.getProperty("adminURL");
-		
-		
 	}
 		 
 	
@@ -56,6 +52,8 @@ public class SecondCategories {
 	
 	
 	@Test()
+	//******RTTC_012  To Verify whether application allows the admin to display list of Categories
+	
 	public void ValidateCatalog() throws InterruptedException {
 		driver.get(adminUrl);
 		loginPOM.Login("admin", "admin@123");

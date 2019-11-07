@@ -53,6 +53,7 @@ public class FourFilterProducts {
 	
 	
 	@Test()
+	//RTTC_014 - To Verify whether application allows the admin to filter the product details
 	public void ValidateFilter() throws InterruptedException {
 		driver.get(adminUrl);
 		loginPOM.Login("admin", "admin@123");

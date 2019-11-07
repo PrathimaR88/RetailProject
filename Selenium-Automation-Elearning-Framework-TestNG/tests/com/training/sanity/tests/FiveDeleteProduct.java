@@ -52,6 +52,8 @@ public class FiveDeleteProduct {
 	
 	
 	@Test()
+	
+//RTTC_015 -- To Verify whether application allows the admin to delete a product from product list
 	public void ValidateFilter() throws InterruptedException {
 		driver.get(adminUrl);
 		loginPOM.Login("admin", "admin@123");

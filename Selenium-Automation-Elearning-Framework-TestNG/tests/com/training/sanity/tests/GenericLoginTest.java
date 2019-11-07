@@ -47,6 +47,7 @@ public class GenericLoginTest {
 	}
 	
 	@Test
+	//This is a generic login test case which will be used in all the test cases
 	public void LoginTest() {
 		logiPOM.Login("admin", "admin@123");
 		screenShot.captureScreenShot("First");

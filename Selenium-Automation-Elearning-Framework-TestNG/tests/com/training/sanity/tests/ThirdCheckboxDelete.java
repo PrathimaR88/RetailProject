@@ -51,12 +51,13 @@ public class ThirdCheckboxDelete {
 	
 	
 	@Test()
+	//***RTTC_013 -- To Verify whether application allows the admin to delete a category from list of Categories
 	public void ValidateCatalog() throws InterruptedException {
 		driver.get(adminUrl);
 		loginPOM.Login("admin", "admin@123");
 		CataPOM.clickOnCategory();
 		CheckPOM.CheckIndian();
-		Thread.sleep(7000);
+		Thread.sleep(3000);
 		driver.quit();
 	}
 	

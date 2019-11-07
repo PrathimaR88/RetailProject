@@ -49,6 +49,7 @@ public class AdminLoginTest {
 	}
 	
 	@Test
+	//RTTC_011 - To verify whether application allows user to get logged in by entering valid credentials in required field
 	public void validLoginTest() {
 		loginPOM.sendUserName("admin");
 		loginPOM.sendPassword("admin@123");
