@@ -28,21 +28,24 @@ private WebDriver driver;
 	@FindBy(xpath="//h1[contains(text(),'Dashboard')]")
 	private WebElement heading;
 	
+	//Enter the value in Username field
 	public void sendUserName(String userName) {
 		this.userName.clear();
 		this.userName.sendKeys(userName);
 	}
 	
+	//Enter the value in Password Field
 	public void sendPassword(String password) {
 		this.password.clear(); 
 		this.password.sendKeys(password); 
 	}
 	
+	//Click action performed on the sig-in button
 	public void clickLoginBtn() {
 		this.loginBtn.click(); 
 	}
 	
-	
+	//Validation of the the page title
 	public void validateTitle()
 	{
 		String titleDisplayed = this.heading.getText();
