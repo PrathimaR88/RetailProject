@@ -9,14 +9,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CatalogCategoriesPOM {
-	
+
+	//******RTTC_012  To Verify whether application allows the admin to display list of Categories
 private WebDriver driver; 
 	
 	public CatalogCategoriesPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
-	
 	
 	
 	/*@FindBy(xpath="//body/div[@id='container']/nav[@id='column-left']/ul[@id='menu']/li[@id='menu-catalog']/a[1]")
@@ -45,6 +45,7 @@ private WebDriver driver;
 		
 	public void clickOnCategory() {
 				
+		//Navigation from Dashboad to the Catalog tab and verify few items are present
 		Actions act = new Actions(driver);
 		WebDriverWait wait = new WebDriverWait(driver,60);
 		wait.until(ExpectedConditions.elementToBeClickable(Catalog));
@@ -56,6 +57,7 @@ private WebDriver driver;
 		this.Prof.isDisplayed();
 		System.out.println("Categories,Products,Recurring Profiles links are displayed in the list");
 		
+		//Move to the Categories link and verify some field in that tab are present
 		act.moveToElement(Catalog).moveToElement(Cat).click().build().perform();
 		
 		this.Catname.isDisplayed();
