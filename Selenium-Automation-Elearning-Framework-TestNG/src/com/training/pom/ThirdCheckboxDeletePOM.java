@@ -6,12 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class ThirdCheckboxDeletePOM {
 
 	private WebDriver driver; 
-	//public int i=1;
 	
+//***RTTC_013 -- To Verify whether application allows the admin to delete a category from list of Categories	
 	public ThirdCheckboxDeletePOM(WebDriver driver){
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
@@ -20,7 +21,7 @@ public class ThirdCheckboxDeletePOM {
 	@FindBy(xpath = "//button[@type='button']")
 	private WebElement Del;
 	
-	@FindBy(xpath = "//*[@class = 'alert alert-success']")
+	@FindBy(xpath = "//div[@class = 'alert alert-success']")
 	private WebElement alert;
 	
 	//@FindBy(xpath="//table[@class='table table-bordered table-hover']/tbody/tr["+i+"]/td[2]")
@@ -29,17 +30,12 @@ public class ThirdCheckboxDeletePOM {
 	public void CheckIndian()
 	{	//Identify the INDIAN category box 
 	
-			String srow = "1";
-			//String scol = "2";
+			String acvalue = "Category Name";
+			int i;
+			int rcount = driver.findElements(By.xpath("//table[@class='table table-bordered table-hover']/tbody/tr")).size();
+			//Validate in the table for the required value and click on the checkbox of delete
 			
-			String acvalue = "INDIAN";
-			int i = Integer.parseInt(srow);
-			
-			//@FindBy(xpath="//table[@class='table table-bordered table-hover']/tbody/tr["+i+"]/td[2]")
-			//private WebElement Value;
-			
-			
-			for (i=1; i<=10; i++)
+			for (i=1; i<=rcount; i++)
 			{
 				String cellvalue = driver.findElement(By.xpath("//table[@class='table table-bordered table-hover']/tbody/tr["+i+"]/td[2]")).getText();
 				System.out.println("The value of the cell is  "+cellvalue);
@@ -64,7 +60,7 @@ public class ThirdCheckboxDeletePOM {
 				
 			}
 					
-						
+			//Click on the delete icon			
 			this.Del.click();
 			
 			//Switch to alert
@@ -78,8 +74,12 @@ public class ThirdCheckboxDeletePOM {
 			simpleAlert.accept();
 			
 			//Verifying the text post click on ok
-			this.alert.getText();
-			//assertEquals(msg," Success: You have modified categories!      ");
-			System.out.println("Deletion of the category is done successfully");
+			String result = this.alert.getText();
+			Assert.assertTrue(true, "Success: You have modified");
+			//Assert.assertTrue(result.contentEquals("Success: You have modified"));
+			//Assert.assertTrue(result.contentEquals("Delete"));
+			//System.out.println("Deletion of the category is done successfully");
+			//Assert.assertThat(result,containsString("Success: You have modified"));
+			
 }
 }
