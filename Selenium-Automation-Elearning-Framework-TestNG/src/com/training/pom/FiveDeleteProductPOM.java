@@ -11,6 +11,9 @@ public class FiveDeleteProductPOM {
 	
 	private WebDriver driver; 
 	
+
+//RTTC_015 -- To Verify whether application allows the admin to delete a product from product list
+	
 	public FiveDeleteProductPOM(WebDriver driver){
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
