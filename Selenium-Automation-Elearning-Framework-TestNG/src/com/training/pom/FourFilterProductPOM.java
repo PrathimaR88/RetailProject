@@ -10,6 +10,7 @@ public class FourFilterProductPOM {
 
 	private WebDriver driver; 
 		
+//RTTC_014 - To Verify whether application allows the admin to filter the product details
 	public FourFilterProductPOM(WebDriver driver){
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
